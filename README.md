@@ -137,3 +137,90 @@ This section outlines the technologies used in the Airbnb Clone backend and thei
 
 8- CI/CD Pipelines
   Automatically tests and deploys code whenever changes are pushed to the repository, ensuring stable and continuous delivery of new features and bug fixes.
+
+  ===========
+   Database Design
+
+This section outlines the core database entities used in the Airbnb Clone backend, including their key fields and relationships.
+
+ Users
+Represents individuals using the platform as either guests or hosts.
+
+Key Fields:
+- id: Unique identifier
+- username: User's login name
+- email: Contact email and login email
+- password: Hashed password for authentication
+- role: Specifies if the user is a host or guest
+
+Relationships:
+- A user can create multiple property listings (if they are a host)
+- A user can make multiple bookings (if they are a guest)
+- A user can write multiple reviews
+
+---
+
+ Properties
+Represents a listing available for booking on the platform.
+
+Key Fields:
+- id: Unique identifier
+- title: Name of the property
+- -images: images for the proerty
+- description: Description of the property
+- location: Address or geographical location
+- price_per_night: Cost per night of stay
+
+Relationships:
+- A property is created by a user (host)
+- A property can have multiple bookings
+- A property can have multiple reviews
+
+---
+
+Bookings
+Represents a reservation made by a guest for a property.
+
+Key Fields:
+- id: Unique identifier
+- user_id: References the user who made the booking
+- property_id: References the booked property
+- check_in: Start date of the booking
+- check_out: End date of the booking
+
+Relationships:
+- A booking belongs to one user
+- A booking is linked to one property
+- A booking may trigger one or more payment records
+
+---
+
+Payments
+Tracks the payment transactions made for bookings.
+
+Key Fields:
+- id: Unique identifier
+- booking_id: References the related booking
+- amount: Total amount paid
+- payment_status: Status (e.g., pending, completed)
+- payment_date: Timestamp of payment
+
+Relationships:
+- A payment is associated with a single booking
+
+---
+
+ Reviews
+Captures user feedback and ratings for properties.
+
+Key Fields:
+- id: Unique identifier
+- user_id: References the reviewer
+- property_id: References the property being reviewed
+- rating: Numeric rating (e.g., 1 to 5 stars)
+- comment: Written feedback
+
+Relationships:
+- A review is written by a user
+- A review is linked to a specific property
+
