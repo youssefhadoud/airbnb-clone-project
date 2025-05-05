@@ -1,4 +1,5 @@
 # airbnb-clone-project
+======================
 Team Roles
 1. Project Manager (PM)
 Brief:
@@ -107,3 +108,32 @@ Builds and manages CI/CD pipelines.
 Unifies development and operations for faster and safer deployments.
 
 Oversees releases, infrastructure, and system stability.
+
+====================
+##  Technology Stack
+
+This project uses a modern and robust technology stack to build a scalable backend for the Airbnb Clone. Each component plays a vital role in delivering core functionalities like property listings, bookings, payments, and user management.
+
+- **Django**  
+  A high-level Python web framework used to build the core backend logic, define data models, and manage the overall server-side application.
+
+- **Django REST Framework (DRF)**  
+  An extension of Django that simplifies the creation of RESTful APIs. It is used to handle all CRUD operations through clean, well-structured API endpoints.
+
+- **PostgreSQL**  
+  A powerful, open-source relational database system used to store all structured data such as users, properties, bookings, and payments.
+
+- **GraphQL**  
+  A query language for APIs that allows clients to request only the data they need. It adds flexibility and efficiency to frontend-backend interactions.
+
+- **Celery**  
+  A distributed task queue used for handling asynchronous tasks like sending emails, notifications, or background payment processing.
+
+- **Redis**  
+  An in-memory data structure store used for caching frequently accessed data and managing asynchronous task queues alongside Celery.
+
+- **Docker**  
+  A containerization platform used to encapsulate the application and its environment for consistent development, testing, and deployment.
+
+- **CI/CD Pipelines**  
+  Automated pipelines (e.g., GitHub Actions, GitLab CI, Jenkins) used to run tests and deploy code changes efficiently and reliably across environments.
