@@ -110,30 +110,30 @@ Unifies development and operations for faster and safer deployments.
 Oversees releases, infrastructure, and system stability.
 
 ====================
-##  Technology Stack
+ Technology Stack
 
-This project uses a modern and robust technology stack to build a scalable backend for the Airbnb Clone. Each component plays a vital role in delivering core functionalities like property listings, bookings, payments, and user management.
+This section outlines the technologies used in the Airbnb Clone backend and their specific roles in the project.
 
-- **Django**  
-  A high-level Python web framework used to build the core backend logic, define data models, and manage the overall server-side application.
+1- Django 
+  Acts as the core backend framework responsible for handling business logic, routing requests, and defining models for users, properties, bookings, payments, and reviews.
 
-- **Django REST Framework (DRF)**  
-  An extension of Django that simplifies the creation of RESTful APIs. It is used to handle all CRUD operations through clean, well-structured API endpoints.
+2- Django REST Framework (DRF)
+  Used to build RESTful API endpoints that power the frontend of the Airbnb Clone. It manages all HTTP-based interactions like registering users, creating listings, or processing bookings.
 
-- **PostgreSQL**  
-  A powerful, open-source relational database system used to store all structured data such as users, properties, bookings, and payments.
+3- PostgreSQL
+  Stores all relational data such as user profiles, property details, bookings, payments, and reviews. Ensures data integrity and supports complex queries efficiently.
 
-- **GraphQL**  
-  A query language for APIs that allows clients to request only the data they need. It adds flexibility and efficiency to frontend-backend interactions.
+4- GraphQL
+  Enables clients to request exactly the data they need (e.g., a property with only specific fields). It is especially useful for frontend performance and dynamic UIs by reducing over-fetching.
 
-- **Celery**  
-  A distributed task queue used for handling asynchronous tasks like sending emails, notifications, or background payment processing.
+5- Celery 
+  Handles background tasks like sending email confirmations, processing delayed payments, or notifying users of booking updates without blocking the main application flow.
 
-- **Redis**  
-  An in-memory data structure store used for caching frequently accessed data and managing asynchronous task queues alongside Celery.
+6- Redis  
+  Supports fast in-memory caching to store frequently accessed data like property details or session tokens. Also acts as a message broker for Celery to process asynchronous tasks.
 
-- **Docker**  
-  A containerization platform used to encapsulate the application and its environment for consistent development, testing, and deployment.
+7- Docker 
+  Ensures that the development and production environments are consistent by containerizing the backend, PostgreSQL, Redis, and other services used in the project.
 
-- **CI/CD Pipelines**  
-  Automated pipelines (e.g., GitHub Actions, GitLab CI, Jenkins) used to run tests and deploy code changes efficiently and reliably across environments.
+8- CI/CD Pipelines
+  Automatically tests and deploys code whenever changes are pushed to the repository, ensuring stable and continuous delivery of new features and bug fixes.
