@@ -292,6 +292,23 @@ All user input is validated and sanitized to prevent injection attacks, such as 
 
 Why it's important: Prevents attackers from executing malicious code or manipulating database queries through crafted inputs.
 
+<br>
+<h2>CI/CD Pipeline</h2> 
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of testing, building, and deploying code whenever changes are made to the project. This ensures that the codebase remains stable, new features are delivered faster, and human error is minimized during deployments.
+
+Why CI/CD Is Important
+Automated Testing: Ensures that every change is validated through tests before merging.
+Faster Releases: Automatically builds and deploys new code to development or production environments.
+Improved Collaboration: Enables teams to work together efficiently without worrying about manual integration or broken builds.
+Rollback Support: Enables easy rollbacks in case of failed deployments, improving reliability.
+
+ 🛠️ Tools Used
+GitHub Actions or gitlab runner: Automates workflows for testing and deploying code on every push or pull request.
+Docker:Containerizes the application for consistent behavior across development, staging, and production environments.
+Docker Hub or GitHub Container Registry: Used to store and distribute built Docker images.
+
+
 
 
 
