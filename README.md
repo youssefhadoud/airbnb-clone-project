@@ -1,6 +1,6 @@
-# airbnb-clone-project
-======================
-Team Roles
+<h1>airbnb-clone-project</h1>
+<br>
+<h2 >Team Roles</h2>
 1. Project Manager (PM)
 Brief:
 Manages project execution, team coordination, and ensures delivery within scope, time, and budget.
@@ -109,8 +109,8 @@ Unifies development and operations for faster and safer deployments.
 
 Oversees releases, infrastructure, and system stability.
 
-====================
- Technology Stack
+<br>
+ <h2>Technology Stack</h2>
 
 This section outlines the technologies used in the Airbnb Clone backend and their specific roles in the project.
 
@@ -138,8 +138,8 @@ This section outlines the technologies used in the Airbnb Clone backend and thei
 8- CI/CD Pipelines
   Automatically tests and deploys code whenever changes are pushed to the repository, ensuring stable and continuous delivery of new features and bug fixes.
 
-  ===========
-   Database Design
+<br>
+ <h2>Database Design</h2>  
 
 This section outlines the core database entities used in the Airbnb Clone backend, including their key fields and relationships.
 
@@ -158,7 +158,6 @@ Relationships:
 - A user can make multiple bookings (if they are a guest)
 - A user can write multiple reviews
 
----
 
  Properties
 Represents a listing available for booking on the platform.
@@ -176,7 +175,7 @@ Relationships:
 - A property can have multiple bookings
 - A property can have multiple reviews
 
----
+
 
 Bookings
 Represents a reservation made by a guest for a property.
@@ -193,7 +192,7 @@ Relationships:
 - A booking is linked to one property
 - A booking may trigger one or more payment records
 
----
+
 
 Payments
 Tracks the payment transactions made for bookings.
@@ -208,7 +207,7 @@ Key Fields:
 Relationships:
 - A payment is associated with a single booking
 
----
+
 
  Reviews
 Captures user feedback and ratings for properties.
@@ -224,8 +223,8 @@ Relationships:
 - A review is written by a user
 - A review is linked to a specific property
 
-  ============
-   Feature Breakdown
+ <br>
+   <h2>Feature Breakdown</h2>
 
 This section provides an overview of the key features implemented in the Airbnb Clone backend and explains their roles in supporting core platform functionalities.
 
@@ -249,5 +248,50 @@ The backend is fully documented using the OpenAPI standard, making it easy for f
 
  Database Optimization
 Implements performance improvements through indexing and caching. These optimizations help reduce database load, speed up data access, and ensure the system scales effectively under heavy usage.
+
+<br>
+<h2> API Security</h2>
+
+Ensuring the security of backend APIs is critical for protecting sensitive data, maintaining trust, and preventing malicious activity. This section outlines the main security measures implemented in the Airbnb Clone backend and their importance.
+
+ 1- Authentication
+All API endpoints are protected using token-based authentication (e.g., JWT). This ensures that only registered users can access their accounts and prevents unauthorized access to private data and operations.
+
+Why it's important: Protects user accounts, personal data, and prevents impersonation or data leaks.
+
+
+2- Authorization
+Role-based access control (RBAC) is implemented to define what actions a user can perform (e.g., only hosts can manage property listings, only admins can access admin-level data).
+
+Why it's important: Ensures that users can only access and modify data that they are permitted to, maintaining system integrity.
+
+
+3- Rate Limiting
+API rate limiting is enforced to prevent abuse and denial-of-service (DoS) attacks by limiting the number of requests a user or IP address can make within a given timeframe.
+
+Why it's important: Helps prevent brute force attacks, server overload, and ensures fair use of system resources.
+
+
+
+4- HTTPS/SSL
+All API communication is encrypted using HTTPS, ensuring that data transmitted between the client and server cannot be intercepted or tampered with.
+
+Why it's important: Secures sensitive information such as login credentials and payment details during transmission.
+
+
+
+5- Secure Payment Handling
+Payments are processed via secure third-party gateways. Sensitive data like credit card numbers are never stored directly on the server.
+
+Why it's important: Reduces liability, ensures compliance with financial regulations (e.g., PCI DSS), and protects users from fraud.
+
+
+
+6- Input Validation & Sanitization
+All user input is validated and sanitized to prevent injection attacks, such as SQL injection or cross-site scripting (XSS).
+
+Why it's important: Prevents attackers from executing malicious code or manipulating database queries through crafted inputs.
+
+
 
 
